@@ -8,15 +8,15 @@ const eslintConfig = defineConfig([
     plugins: { perfectionist },
     rules: {
       "perfectionist/sort-jsx-props": ["warn", {
-        type: "custom",
+        type: "alphabetical",
         order: "asc",
-        groups: ["identifiers", "attributes", "aria-data", "state", "callbacks", "unknown"],
-        customGroups: {
-          identifiers: ["key", "ref", "id", "name", "className"],
-          "aria-data": ["aria-*", "data-*"],
-          state: ["disabled", "checked", "selected", "open", "loading", "readOnly", "required"],
-          callbacks: ["on*"],
-        }
+        groups: ["identifiers", "unknown", "aria-data", "state", "callbacks"],
+        customGroups: [
+          { groupName: "identifiers", elementNamePattern: ["key", "ref", "id", "name", "className"] },
+          { groupName: "aria-data", elementNamePattern: ["aria-*", "data-*"] },
+          { groupName: "state", elementNamePattern: ["disabled", "checked", "selected", "open", "loading", "readOnly", "required"] },
+          { groupName: "callbacks", elementNamePattern: ["on*"] },
+        ]
       }]
     }
   },
