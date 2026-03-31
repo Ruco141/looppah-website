@@ -1,0 +1,36 @@
+.farewell {
+    width: 100%;
+    max-width: var(--layout-max-width);
+    padding: 0 var(--layout-margin);
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-350);
+    padding: var(--space-350);
+    border: var(--border-blue);
+    border-radius: var(--radius-400);
+    background: var(--environment-blue);
+    box-shadow: var(--shadow-blue-card);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-250);
+}
+
+.headline {
+    width: 100%;
+    color: var(--color-looppah-blue-500);
+}
+
+.subheadline {
+    color: var(--color-looppah-blue-800);
+}
