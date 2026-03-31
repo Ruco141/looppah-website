@@ -1,0 +1,227 @@
+/* ─── BASE  ·  Mobile (320px+) ───────────────────────────────── */
+:root {
+    /* Familias tipográficas */
+    --font-sans: "Alexandria", sans-serif;
+    --font-serif: "Source Serif 4", serif;
+
+    /* Pesos tipográficos */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    --icon-size: 16px;
+
+    /* Colores — LooppahBlue */
+    --color-looppah-blue-25: #f2f5ff;
+    --color-looppah-blue-75: #e5ecff;
+    --color-looppah-blue-100: #ccd8ff;
+    --color-looppah-blue-200: #99b1ff;
+    --color-looppah-blue-300: #668bff;
+    --color-looppah-blue-400: #3364ff;
+    --color-looppah-blue-500: #003dff;
+    --color-looppah-blue-600: #0031cc;
+    --color-looppah-blue-700: #002599;
+    --color-looppah-blue-800: #001866;
+    --color-looppah-blue-900: #000c33;
+
+    /* Colores — Gray */
+    --color-gray-0: #ffffff;
+    --color-gray-100: #f2f2f2;
+    --color-gray-200: #e5e5e5;
+    --color-gray-300: #cccccc;
+    --color-gray-400: #999999;
+    --color-gray-600: #666666;
+    --color-gray-700: #4d4d4d;
+    --color-gray-800: #333333;
+    --color-gray-900: #1a1a1a;
+    --color-gray-1000: #000000;
+
+    /* Colores — Copper */
+    --color-copper-25: #f8f6f3;
+    --color-copper-75: #f0ede8;
+    --color-copper-100: #e1dcd1;
+    --color-copper-200: #c4b9a2;
+    --color-copper-300: #a69574;
+    --color-copper-400: #897245;
+    --color-copper-500: #6b4f17;
+    --color-copper-600: #563f12;
+    --color-copper-700: #402f0e;
+    --color-copper-800: #2b2009;
+    --color-copper-900: #151005;
+
+    /* Colores — Pine */
+    --color-pine-25: #f3f4f4;
+    --color-pine-75: #e7eae8;
+    --color-pine-100: #d0d5d1;
+    --color-pine-200: #a1aba3;
+    --color-pine-300: #718176;
+    --color-pine-400: #425748;
+    --color-pine-500: #132d1a;
+    --color-pine-600: #0f2415;
+    --color-pine-700: #0b1b10;
+    --color-pine-800: #08120a;
+    --color-pine-900: #040905;
+
+    /* Bordes */
+    --border-blue: 1px solid var(--color-looppah-blue-100);
+    --border-copper: 1px solid var(--color-copper-200);
+    --border-pine: 1px solid var(--color-pine-200);
+
+    /* Gradientes */
+    --gradient-blue: linear-gradient(to bottom, var(--color-looppah-blue-25) 0%, var(--color-looppah-blue-75) 100%);
+    --gradient-copper: linear-gradient(to bottom, var(--color-copper-25) 0%, var(--color-copper-75) 100%);
+    --gradient-pine: linear-gradient(to bottom, var(--color-pine-25) 0%, var(--color-pine-75) 100%);
+    --environment-blue: linear-gradient(to bottom, var(--color-gray-0) 0%, var(--color-looppah-blue-25) 100%);
+
+    /* Sombras */
+    --shadow-copper-card: 0px 10px 50px 0px var(--color-copper-100);
+    --shadow-pine-card: 0px 10px 50px 0px var(--color-pine-100);
+    --shadow-blue-card: 0px 10px 50px 0px var(--color-looppah-blue-100);
+    --shadow-tag: 1px 1px 5px 0px var(--color-looppah-blue-100);
+    --shadow-block: 0px 4px 10px 0px var(--color-looppah-blue-75);
+
+    /* Efectos */
+    --backdrop-blur: blur(25px);
+
+    /* Spacing — Mobile base */
+    --space-0: 0px;
+    --space-50: 4px;
+    --space-100: 8px;
+    --space-150: 12px;
+    --space-200: 16px;
+    --space-250: 20px;
+    --space-300: 24px;
+    --space-350: 28px;
+    --space-400: 32px;
+    --space-450: 36px;
+    --space-500: 40px;
+    --space-550: 44px;
+    --space-600: 48px;
+    --space-650: 52px;
+    --space-700: 56px;
+    --space-750: 60px;
+    --space-800: 64px;
+    --space-850: 68px;
+    --space-900: 72px;
+    --space-950: 76px;
+    --space-1000: 80px;
+    --space-1500: 120px;
+    --space-1900: 152px;
+    --space-1950: 156px;
+    --space-2000: 160px;
+    --space-3000: 240px;
+    --space-4000: 320px;
+
+    /* Radius — Mobile base */
+    --radius-0: 0px;
+    --radius-50: 4px;
+    --radius-100: 8px;
+    --radius-150: 12px;
+    --radius-200: 16px;
+    --radius-250: 20px;
+    --radius-300: 24px;
+    --radius-350: 28px;
+    --radius-400: 32px;
+    --radius-full: 9999px;
+
+    /* Layout — Mobile base */
+    --layout-margin: 20px;
+    --layout-margin-top: 20px;
+    --layout-spacing: 80px;
+}
+
+/* ─── TABLET  ·  min-width: 40rem (640px) ────────────────────── */
+@media (min-width: 40rem) {
+    :root {
+        --icon-size: 20px;
+
+        --layout-margin: 32px;
+        --layout-margin-top: 24px;
+        --layout-spacing: 96px;
+
+        --space-50: 6px;
+        --space-100: 12px;
+        --space-150: 18px;
+        --space-200: 24px;
+        --space-250: 30px;
+        --space-300: 36px;
+        --space-350: 42px;
+        --space-400: 48px;
+        --space-450: 54px;
+        --space-500: 60px;
+        --space-550: 66px;
+        --space-600: 72px;
+        --space-650: 78px;
+        --space-700: 84px;
+        --space-750: 90px;
+        --space-800: 96px;
+        --space-850: 102px;
+        --space-900: 108px;
+        --space-950: 114px;
+        --space-1000: 120px;
+        --space-1500: 180px;
+        --space-1900: 228px;
+        --space-1950: 234px;
+        --space-2000: 240px;
+        --space-3000: 360px;
+        --space-4000: 480px;
+
+        --radius-50: 6px;
+        --radius-100: 12px;
+        --radius-150: 18px;
+        --radius-200: 24px;
+        --radius-250: 30px;
+        --radius-300: 36px;
+        --radius-350: 42px;
+        --radius-400: 48px;
+    }
+}
+
+/* ─── DESKTOP  ·  min-width: 80rem (1280px) ──────────────────── */
+@media (min-width: 80rem) {
+    :root {
+        --icon-size: 22px;
+
+        --layout-margin: 48px;
+        --layout-margin-top: 24px;
+        --layout-max-width: 1512px;
+        --layout-spacing: 128px;
+
+        --space-50: 8px;
+        --space-100: 16px;
+        --space-150: 24px;
+        --space-200: 32px;
+        --space-250: 40px;
+        --space-300: 48px;
+        --space-350: 56px;
+        --space-400: 64px;
+        --space-450: 72px;
+        --space-500: 80px;
+        --space-550: 88px;
+        --space-600: 96px;
+        --space-650: 104px;
+        --space-700: 112px;
+        --space-750: 120px;
+        --space-800: 128px;
+        --space-850: 136px;
+        --space-900: 144px;
+        --space-950: 152px;
+        --space-1000: 160px;
+        --space-1500: 240px;
+        --space-1900: 304px;
+        --space-1950: 312px;
+        --space-2000: 320px;
+        --space-3000: 480px;
+        --space-4000: 640px;
+
+        --radius-50: 8px;
+        --radius-100: 16px;
+        --radius-150: 24px;
+        --radius-200: 32px;
+        --radius-250: 40px;
+        --radius-300: 48px;
+        --radius-350: 56px;
+        --radius-400: 64px;
+    }
+}

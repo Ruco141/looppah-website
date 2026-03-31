@@ -1,0 +1,124 @@
+/* ─── H1 ─────────────────────────────────────────────────── */
+.headline-h1 {
+    font-family: var(--font-sans);
+    font-size: 48px;
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
+    letter-spacing: 0;
+}
+@media (min-width: 40rem) { .headline-h1 { font-size: 64px; } }
+@media (min-width: 80rem) { .headline-h1 { font-size: 72px; } }
+
+/* ─── H2 ─────────────────────────────────────────────────── */
+.headline-h2 {
+    font-family: var(--font-sans);
+    font-size: 40px;
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
+    letter-spacing: 0;
+}
+@media (min-width: 40rem) { .headline-h2 { font-size: 48px; } }
+@media (min-width: 80rem) { .headline-h2 { font-size: 56px; } }
+
+/* ─── H3 ─────────────────────────────────────────────────── */
+.headline-h3 {
+    font-family: var(--font-sans);
+    font-size: 32px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.2;
+    letter-spacing: 0;
+}
+@media (min-width: 40rem) { .headline-h3 { font-size: 40px; } }
+@media (min-width: 80rem) { .headline-h3 { font-size: 48px; } }
+
+/* ─── H4 ─────────────────────────────────────────────────── */
+.headline-h4 {
+    font-family: var(--font-sans);
+    font-size: 22px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.2;
+    letter-spacing: 0;
+}
+@media (min-width: 40rem) { .headline-h4 { font-size: 24px; } }
+@media (min-width: 80rem) { .headline-h4 { font-size: 32px; } }
+
+/* ─── H5 ─────────────────────────────────────────────────── */
+.headline-h5 {
+    font-family: var(--font-sans);
+    font-size: 20px;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+@media (min-width: 40rem) { .headline-h5 { font-size: 22px; } }
+@media (min-width: 80rem) { .headline-h5 { font-size: 24px; } }
+
+/* ─── SH1 ────────────────────────────────────────────────── */
+.headline-sh1 {
+    font-family: var(--font-serif);
+    font-size: 32px;
+    font-weight: var(--font-weight-bold);
+    font-style: italic;
+    line-height: 1.4;
+    letter-spacing: 0;
+}
+@media (min-width: 40rem) { .headline-sh1 { font-size: 40px; } }
+@media (min-width: 80rem) { .headline-sh1 { font-size: 48px; } }
+
+/* ─── SH2 ────────────────────────────────────────────────── */
+.headline-sh2 {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    font-weight: var(--font-weight-bold);
+    font-style: italic;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+}
+@media (min-width: 40rem) { .headline-sh2 { font-size: 24px; } }
+@media (min-width: 80rem) { .headline-sh2 { font-size: 32px; } }
+
+/* ─── Body Base ──────────────────────────────────────────── */
+.body-base {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: var(--font-weight-regular);
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+}
+@media (min-width: 40rem) { .body-base { font-size: 16px; } }
+@media (min-width: 80rem) { .body-base { font-size: 20px; } }
+
+/* ─── Body Small ─────────────────────────────────────────── */
+.body-small {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: var(--font-weight-regular);
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+}
+@media (min-width: 40rem) { .body-small { font-size: 14px; } }
+@media (min-width: 80rem) { .body-small { font-size: 16px; } }
+
+/* ─── Body Stylized ──────────────────────────────────────── */
+.body-stylized {
+    font-family: var(--font-serif);
+    font-size: 16px;
+    font-weight: var(--font-weight-bold);
+    font-style: italic;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+}
+@media (min-width: 40rem) { .body-stylized { font-size: 20px; } }
+@media (min-width: 80rem) { .body-stylized { font-size: 22px; } }
+
+/* ─── Body Emphasis ──────────────────────────────────────── */
+.body-emphasis {
+    font-family: var(--font-serif);
+    font-size: 12px;
+    font-weight: var(--font-weight-regular);
+    font-style: italic;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+}
+@media (min-width: 40rem) { .body-emphasis { font-size: 14px; } }
+@media (min-width: 80rem) { .body-emphasis { font-size: 16px; } }
