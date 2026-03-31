@@ -1,0 +1,29 @@
+.bridge {
+    width: 100%;
+    padding: var(--space-0) var(--layout-margin);
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-300);
+}
+
+.title {
+    text-align: center;
+    color: var(--color-looppah-blue-500);
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--color-looppah-blue-800);
+}
+
+@media (min-width: 80rem) {
+    .content {
+        gap: var(--space-200);
+    }
+}
