@@ -1,4 +1,4 @@
-export default {
+const stylelintConfig = {
     plugins: ["stylelint-order"],
     rules: {
         "order/properties-order": [
@@ -15,3 +15,5 @@ export default {
         ]
     }
 };
+
+export default stylelintConfig;
