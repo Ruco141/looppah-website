@@ -1,0 +1,87 @@
+.hero {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+    border-bottom-left-radius: var(--radius-400);
+    border-bottom-right-radius: var(--radius-400);
+    background: var(--gradient-blue);
+    box-shadow: 0px 20px 100px 0 var(--color-looppah-blue-100);
+}
+
+/* ─── Glow ────────────────────────────────────── */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: -500px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1395px;
+    height: 590px;
+    border-radius: 50%;
+    background: var(--color-looppah-blue-200);
+    filter: blur(150px);
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.8;
+}
+
+/* ─── Content ─────────────────────────────────── */
+.content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-1500) var(--layout-margin) var(--space-2000);
+    gap: var(--space-750);
+}
+
+.contentBg {
+    object-fit: cover;
+}
+
+/* ─── Headline ────────────────────────────────── */
+.headline {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.h1Blue {
+    color: var(--color-looppah-blue-500);
+}
+
+.h1Dark {
+    color: var(--color-looppah-blue-800);
+}
+
+/* ─── Subheadline ─────────────────────────────── */
+.subheadline {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-250);
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--color-looppah-blue-800);
+}
+
+/* ─── Tablet  ·  min-width: 40rem ─────────────── */
+@media (min-width: 40rem) {
+    .content {
+        padding-top: var(--space-900);
+        padding-bottom: var(--space-1500);
+        gap: var(--space-400);
+    }
+}
