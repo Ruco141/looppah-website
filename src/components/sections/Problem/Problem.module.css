@@ -1,0 +1,71 @@
+.problem {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-350);
+    padding: var(--space-0) var(--layout-margin);
+}
+
+/* ─── Headline ───────────────────────────────────────────── */
+.headline {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.headlineTitle {
+    width: 100%;
+    text-align: center;
+    color: var(--color-looppah-blue-500);
+}
+
+.subheadline {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-inline: var(--space-100);
+    padding-block-start: var(--space-300);
+}
+
+.subheadlineText {
+    width: 100%;
+    text-align: center;
+    color: var(--color-looppah-blue-800);
+}
+
+.accent {
+    color: var(--color-looppah-blue-500);
+}
+
+/* ─── Cards ──────────────────────────────────────────────── */
+.cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-300);
+}
+
+/* ─── Tablet ──────────────────────────────────────────────── */
+@media (min-width: 40rem) {
+    .problem {
+        gap: var(--space-250);
+    }
+
+    .cards {
+        gap: var(--space-200);
+    }
+
+    .subheadline {
+        padding-block-start: var(--space-250);
+    }
+}
+
+/* ─── Desktop ─────────────────────────────────────────────── */
+@media (min-width: 80rem) {
+    .subheadline {
+        padding-block-start: var(--space-150);
+    }
+}
