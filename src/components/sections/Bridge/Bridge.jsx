@@ -2,7 +2,7 @@ import styles from "./Bridge.module.css";
 
 export default function Bridge() {
     return (
-        <section id="bridge" className={styles.bridge}>
+        <section className={styles.bridge} id="bridge">
             <div className={styles.content}>
                 <h2 className={`${styles.title} headline-sh1`}>
                     El equipo que necesitas para tu proyecto todavía no te conoce

@@ -40,23 +40,23 @@ export default function Navbar() {
             <div className={styles.brand}>
                 <Image
                     className={styles.isotipo}
-                    src="/assets/brand/looppah_isotipo.svg"
-                    alt="Looppah"
                     width={22}
+                    alt="Looppah"
                     height={30}
+                    src="/assets/brand/looppah_isotipo.svg"
                 />
 
                 <motion.div
                     animate={{ opacity: scrolled ? 0 : 1 }}
-                    transition={{ duration: 0.6, ease: "easeInOut" }}
                     style={{ pointerEvents: scrolled ? "none" : "auto" }}
+                    transition={{ duration: 0.6, ease: "easeInOut" }}
                 >
                     <Image
                         className={styles.logotipo}
-                        src="/assets/brand/looppah_logotipo.svg"
-                        alt="Looppah"
                         width={179}
+                        alt="Looppah"
                         height={42}
+                        src="/assets/brand/looppah_logotipo.svg"
                     />
                 </motion.div>
             </div>
@@ -68,19 +68,19 @@ export default function Navbar() {
             >
                 {navLinks.map((link) => (
                     <Link
-                        key={link.label}
-                        href={link.href}
                         className={`${styles.navLink} body-small`}
+                        href={link.href}
+                        key={link.label}
                         onMouseEnter={() => setHovered(link.href)}
                     >
                         {bubbleTarget === link.href && (
                             <motion.span
-                                layoutId="bubble"
-                                layout="x"
                                 className={styles.activeBubble}
                                 animate={{
                                     scale: hovered ? 1.1 : 1,
                                 }}
+                                layout="x"
+                                layoutId="bubble"
                                 transition={{
                                     type: "spring",
                                     stiffness: 150,
@@ -96,10 +96,10 @@ export default function Navbar() {
 
             {/* ── CTA ── */}
             <motion.div
-                animate={{ opacity: scrolled ? 0 : 1 }}
-                transition={{ duration: 0.6, ease: "easeInOut" }}
-                style={{ pointerEvents: scrolled ? "none" : "auto" }}
                 className={styles.ctaWrap}
+                animate={{ opacity: scrolled ? 0 : 1 }}
+                style={{ pointerEvents: scrolled ? "none" : "auto" }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
             >
                 <Button variant="primary">Únete a la lista</Button>
             </motion.div>
@@ -109,10 +109,10 @@ export default function Navbar() {
             <Hamburger open={open} onToggle={() => setOpen((v) => !v)} />
 
             <MobileDropdown
+                pathname={activeHref}
+                navLinks={navLinks}
                 open={open}
                 onClose={() => setOpen(false)}
-                navLinks={navLinks}
-                pathname={activeHref}
             />
         </nav>
     );

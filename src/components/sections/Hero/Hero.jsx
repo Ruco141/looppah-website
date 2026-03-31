@@ -7,33 +7,33 @@ import styles from "./Hero.module.css";
 
 export default function Hero() {
     return (
-        <section id="hero" className={styles.hero}>
+        <section className={styles.hero} id="hero">
             <div className={styles.content}>
                 <Image
                     className={styles.contentBg}
-                    src="/assets/illustrations/juan_maria.png"
                     alt=""
                     fill
-                    sizes="100vw"
                     quality={90}
+                    sizes="100vw"
+                    src="/assets/illustrations/juan_maria.png"
                     priority
                 />
 
                 <div className={styles.headline}>
                     <h1 className="headline-h1">
                         <motion.span
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1, ease: "easeOut", delay: 0.25 }}
                             className={styles.h1Blue}
+                            animate={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 20 }}
+                            transition={{ duration: 1, ease: "easeOut", delay: 0.25 }}
                         >
                             Crear con otras personas{" "}
                         </motion.span>
                         <motion.span
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1, ease: "easeInOut", delay: 0.4 }}
                             className={styles.h1Dark}
+                            animate={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 20 }}
+                            transition={{ duration: 1, ease: "easeInOut", delay: 0.4 }}
                         >
                             no debería ser tan difícil
                         </motion.span>
@@ -41,10 +41,10 @@ export default function Hero() {
                 </div>
 
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, ease: "easeInOut", delay: 0.4 }}
                     className={styles.subheadline}
+                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    transition={{ duration: 1, ease: "easeInOut", delay: 0.4 }}
                 >
                     <p className={`${styles.subtitle} headline-h5`}>
                         Looppah es donde publicas lo que estás construyendo, encuentras colaboradores y
@@ -52,9 +52,9 @@ export default function Hero() {
                     </p>
 
                     <ButtonPill
-                        variant="dark"
-                        label="Mira como funciona"
                         emphasis="Cualquiera que sea tu proyecto, aquí encontraras al equipo."
+                        label="Mira como funciona"
+                        variant="dark"
                         onClick={() => document.getElementById("howitworks")?.scrollIntoView({ behavior: "smooth" })}
                     />
                 </motion.div>

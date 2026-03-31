@@ -5,36 +5,36 @@ export default function Footer() {
     const year = new Date().getFullYear();
 
     return (
-        <footer id="footer" className={styles.footer}>
+        <footer className={styles.footer} id="footer">
             <Image
-                src="/assets/brand/looppah_isotipo.svg"
-                alt="Looppah"
                 width={22}
+                alt="Looppah"
                 height={30}
+                src="/assets/brand/looppah_isotipo.svg"
             />
 
             <div className={styles.info}>
                 <div className={styles.contact}>
                     <a
-                        href="mailto:contact@looppah.com"
                         className={`${styles.text} ${styles.email} body-small`}
+                        href="mailto:contact@looppah.com"
                     >
                         contact@looppah.com
                     </a>
 
                     <a
-                        href="https://instagram.com/looppah"
-                        target="_blank"
-                        rel="noopener noreferrer"
                         className={styles.instagramLink}
+                        href="https://instagram.com/looppah"
+                        rel="noopener noreferrer"
+                        target="_blank"
                         aria-label="Instagram de Looppah"
                     >
                         <Image
-                            src="/assets/icons/instagram.svg"
-                            alt=""
-                            width={20}
-                            height={20}
                             aria-hidden="true"
+                            width={20}
+                            alt=""
+                            height={20}
+                            src="/assets/icons/instagram.svg"
                         />
                     </a>
                 </div>

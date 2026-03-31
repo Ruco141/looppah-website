@@ -95,8 +95,8 @@ function AnimatedBlock({ block, index, isDesktop, scrollYProgress, exitY, setCar
 
     return (
         <div
-            ref={(node) => setCardRef(index, node)}
             className={styles.blockWrapper}
+            ref={(node) => setCardRef(index, node)}
             style={{
                 top: isDesktop
                     ? `${HIW_CONFIG.STACK_BASE_TOP + index * HIW_CONFIG.STACK_STEP}px`
@@ -112,10 +112,10 @@ function AnimatedBlock({ block, index, isDesktop, scrollYProgress, exitY, setCar
                 }}
             >
                 <HowItWorksBlock
+                    image={block.image}
+                    tags={block.tags}
                     title={block.title}
                     description={block.description}
-                    tags={block.tags}
-                    image={block.image}
                 />
             </motion.div>
         </div>
@@ -188,37 +188,37 @@ export default function HowItWorks() {
     }, [isDesktop]);
 
     return (
-        <section id="howitworks" ref={sectionRef} className={styles.howitworks} aria-labelledby="hiw-headline">
+        <section className={styles.howitworks} id="howitworks" ref={sectionRef} aria-labelledby="hiw-headline">
             <div className={styles.headline}>
-                <h2 id="hiw-headline" className={`headline-h3 ${styles.headlineTitle}`}>
+                <h2 className={`headline-h3 ${styles.headlineTitle}`} id="hiw-headline">
                     Así se crean conexiones
                 </h2>
             </div>
 
             <div
-                ref={trackRef}
                 className={`${styles.blocks} ${!isDesktop ? styles.carouselTrack : ""}`}
+                ref={trackRef}
                 aria-label="Bloques de funcionamiento"
             >
                 {blocks.map((block, index) => (
                     <AnimatedBlock
                         key={block.title}
-                        block={block}
+                        exitY={exitY}
                         index={index}
+                        setCardRef={setCardRef}
+                        block={block}
                         isDesktop={isDesktop}
                         scrollYProgress={scrollYProgress}
-                        exitY={exitY}
-                        setCardRef={setCardRef}
                     />
                 ))}
             </div>
 
             {!isDesktop && (
-                <div className={styles.dots} aria-hidden="true">
+                <div aria-hidden="true" className={styles.dots}>
                     {blocks.map((block, index) => (
                         <span
-                            key={block.title}
                             className={`${styles.dot} ${index === activeIndex ? styles.dotActive : ""}`}
+                            key={block.title}
                         />
                     ))}
                 </div>

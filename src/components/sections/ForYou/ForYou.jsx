@@ -99,26 +99,26 @@ export default function ForYou() {
             <div className={styles.container}>
                 <div className={styles.bg}>
                     <Image
-                        className={styles.bgImage}
-                        src="/assets/illustrations/campus.png"
-                        alt=""
                         aria-hidden="true"
+                        className={styles.bgImage}
+                        alt=""
                         fill
-                        sizes="100vw"
                         quality={90}
+                        sizes="100vw"
+                        src="/assets/illustrations/campus.png"
                     />
                 </div>
 
-                <h2 id="foryou-headline" className={`${styles.headline} headline-h3`}>
+                <h2 className={`${styles.headline} headline-h3`} id="foryou-headline">
                     Es para ti si eres como ellos
                 </h2>
 
-                <div ref={trackRef} className={styles.track}>
+                <div className={styles.track} ref={trackRef}>
                     {cards.map((card) => (
                         <ForYouSlideCard
                             key={`${card.sender.name}-${card.receiver.name}`}
-                            sender={card.sender}
                             receiver={card.receiver}
+                            sender={card.sender}
                         />
                     ))}
                 </div>
@@ -127,19 +127,19 @@ export default function ForYou() {
                     <button
                         className={styles.control}
                         type="button"
-                        onClick={() => moveByCard(-1)}
                         aria-label="Tarjeta anterior"
+                        onClick={() => moveByCard(-1)}
                     >
-                        <Image src="/assets/icons/chevron_left.svg" alt="" width={20} height={20} />
+                        <Image width={20} alt="" height={20} src="/assets/icons/chevron_left.svg" />
                     </button>
 
                     <button
                         className={styles.control}
                         type="button"
-                        onClick={() => moveByCard(1)}
                         aria-label="Siguiente tarjeta"
+                        onClick={() => moveByCard(1)}
                     >
-                        <Image src="/assets/icons/chevron_right.svg" alt="" width={20} height={20} />
+                        <Image width={20} alt="" height={20} src="/assets/icons/chevron_right.svg" />
                     </button>
                 </div>
             </div>

@@ -36,7 +36,7 @@ export default function Problem() {
     return (
         <section className={styles.problem} aria-labelledby="problem-headline">
             <div className={styles.headline}>
-                <h2 id="problem-headline" className={`headline-h3 ${styles.headlineTitle}`}>
+                <h2 className={`headline-h3 ${styles.headlineTitle}`} id="problem-headline">
                     Esto te ha pasado
                 </h2>
             </div>
@@ -45,10 +45,10 @@ export default function Problem() {
                 {cards.map((card) => (
                     <ProblemCard
                         key={card.title}
-                        title={card.title}
-                        segments={card.segments}
                         image={card.image}
                         imageAlt={card.imageAlt}
+                        segments={card.segments}
+                        title={card.title}
                     />
                 ))}
             </div>

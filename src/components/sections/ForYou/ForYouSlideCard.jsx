@@ -4,17 +4,17 @@ import styles from "./ForYouSlideCard.module.css";
 
 export default function ForYouSlideCard({ sender, receiver }) {
     return (
-        <BackdropBlur blur="10px" className={styles.card}>
+        <BackdropBlur className={styles.card} blur="10px">
             <article aria-label={`Conexión entre ${sender.name} y ${receiver.name}`}>
                 <div className={styles.participant}>
                     <header className={styles.participantHeader}>
                         <div className={styles.avatarWrap}>
                             <Image
                                 className={styles.avatar}
-                                src={sender.avatar}
-                                alt={sender.name}
                                 width={38}
+                                alt={sender.name}
                                 height={38}
+                                src={sender.avatar}
                             />
                         </div>
                         <p className={`${styles.participantName} body-stylized`}>{sender.name}</p>
@@ -32,10 +32,10 @@ export default function ForYouSlideCard({ sender, receiver }) {
                         <div className={styles.avatarWrap}>
                             <Image
                                 className={styles.avatar}
-                                src={receiver.avatar}
-                                alt={receiver.name}
                                 width={38}
+                                alt={receiver.name}
                                 height={38}
+                                src={receiver.avatar}
                             />
                         </div>
                     </header>

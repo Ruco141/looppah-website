@@ -54,26 +54,26 @@ export default function ButtonPill({
         return (
             <motion.form
                 className={`${styles.pillExpanded} body-small`}
-                onSubmit={handleSubmit}
                 layout
+                onSubmit={handleSubmit}
                 transition={springTransition}
             >
                 <AnimatePresence mode="popLayout">
                     {isExpanded && (
                         <motion.input
-                            key="input"
-                            type="email"
-                            placeholder={placeholder}
-                            value={email}
-                            onChange={handleInputChange}
-                            required
-                            autoFocus
                             className={styles.input}
-                            initial={{ width: 0, opacity: 0 }}
+                            key="input"
                             animate={{ width: "auto", opacity: 1 }}
                             exit={{ width: 0, opacity: 0 }}
-                            transition={springTransition}
+                            initial={{ width: 0, opacity: 0 }}
+                            type="email"
+                            value={email}
+                            required
+                            autoFocus
                             layout
+                            onChange={handleInputChange}
+                            placeholder={placeholder}
+                            transition={springTransition}
                         />
                     )}
                 </AnimatePresence>
@@ -92,11 +92,11 @@ export default function ButtonPill({
                                 <span className={styles.submitText}>{submitLabel}</span>
                                 <span className={styles.submitIcon}>
                                     <Image
-                                        src={icon}
-                                        alt=""
                                         aria-hidden="true"
                                         width={16}
+                                        alt=""
                                         height={16}
+                                        src={icon}
                                     />
                                 </span>
                             </>
@@ -109,13 +109,13 @@ export default function ButtonPill({
                 <AnimatePresence mode="popLayout">
                     {!isExpanded && (
                         <motion.span
-                            key="emphasis"
                             className={`${styles.label} body-emphasis`}
-                            initial={{ opacity: 0 }}
+                            key="emphasis"
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            transition={springTransition}
+                            initial={{ opacity: 0 }}
                             layout="position"  // Solo posición
+                            transition={springTransition}
                         >
                             {emphasis}
                         </motion.span>

@@ -12,18 +12,18 @@ export default function HowItWorksBlock({ title, description, tags, image }) {
 
                     <div className={styles.tags}>
                         {tags.map((tag) => (
-                            <div key={tag.label} className={styles.tag}>
+                            <div className={styles.tag} key={tag.label}>
                                 <span className={`body-small ${styles.tagLabel}`}>{tag.label}</span>
 
                                 <div className={styles.tagIconWrap}>
                                     <Image
-                                        className={styles.tagIcon}
-                                        src={tag.icon}
-                                        alt=""
                                         aria-hidden="true"
+                                        className={styles.tagIcon}
                                         width={22}
+                                        alt=""
                                         height={22}
                                         quality={90}
+                                        src={tag.icon}
                                     />
                                 </div>
                             </div>
@@ -34,13 +34,13 @@ export default function HowItWorksBlock({ title, description, tags, image }) {
 
             <div className={styles.imageWrap}>
                 <Image
-                    className={styles.image}
-                    src={image}
-                    alt=""
                     aria-hidden="true"
+                    className={styles.image}
+                    alt=""
                     fill
-                    sizes="(min-width: 80rem) 50vw, 100vw"
                     quality={90}
+                    sizes="(min-width: 80rem) 50vw, 100vw"
+                    src={image}
                 />
             </div>
         </div>

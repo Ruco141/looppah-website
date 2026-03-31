@@ -11,11 +11,11 @@ export default function Button(
     }) {
     return (
         <motion.button
-            whileHover={{filter: "brightness(1.2)", scale: 1.05}}
+            className={`${styles.btn} ${styles[variant]} body-small`}
             whileTap={{filter:"brightness(0.8)", scale: 0.95}}
             transition={{type: "spring", stiffness: 300, damping:15}}
 
-            className={`${styles.btn} ${styles[variant]} body-small`}
+            whileHover={{filter: "brightness(1.2)", scale: 1.05}}
             {...props}
         >
             {children}

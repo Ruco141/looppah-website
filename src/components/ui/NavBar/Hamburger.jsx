@@ -6,8 +6,8 @@ import styles from "./Hamburger.module.css";
 export default function Hamburger({ open, onToggle }) {
     return (
         <button
-            type="button"
             className={styles.hamburger}
+            type="button"
             onClick={onToggle}
         >
             {/* Top-left → diagonal \ */}

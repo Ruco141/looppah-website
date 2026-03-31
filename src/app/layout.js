@@ -37,7 +37,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="es" className={`${alexandria.variable} ${sourceSerif.variable}`}>
+        <html className={`${alexandria.variable} ${sourceSerif.variable}`} lang="es">
         <body>
         <div className={styles.page}>
             <div className={styles.navbarWrap}>

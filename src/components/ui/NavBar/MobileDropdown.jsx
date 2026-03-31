@@ -13,9 +13,9 @@ export default function MobileDropdown({ open, onClose, navLinks, activeHref }) 
                     <div className={styles.overlay} onClick={onClose} />
                     <motion.div
                         className={styles.dropdown}
-                        initial={{ scale: 0, borderRadius: "50%" }}
                         animate={{ scale: 1, borderRadius: "0%" }}
                         exit={{ scale: 0, borderRadius: "50%" }}
+                        initial={{ scale: 0, borderRadius: "50%" }}
                         style={{ transformOrigin: "top right" }}
                         transition={{
                             type: "spring",
@@ -27,9 +27,9 @@ export default function MobileDropdown({ open, onClose, navLinks, activeHref }) 
                             <div className={styles.links}>
                                 {navLinks.map((link) => (
                                     <Link
-                                        key={link.label}
-                                        href={link.href}
                                         className={`${styles.navLink} body-small`}
+                                        href={link.href}
+                                        key={link.label}
                                         onClick={onClose}
                                     >
                                         {link.label}
@@ -41,23 +41,23 @@ export default function MobileDropdown({ open, onClose, navLinks, activeHref }) 
 
                             <div className={styles.contact}>
                                 <a
-                                    href="mailto:contact@looppah.com"
                                     className={`${styles.contactLink} body-small`}
+                                    href="mailto:contact@looppah.com"
                                 >
                                     contact@looppah.com
                                 </a>
 
                                 <a
-                                    href="https://instagram.com/looppah"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
                                     className={styles.instagram}
+                                    href="https://instagram.com/looppah"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
                                 >
                                     <Image
-                                        src="/assets/icons/instagram.svg"
-                                        alt="Instagram"
                                         width={20}
+                                        alt="Instagram"
                                         height={20}
+                                        src="/assets/icons/instagram.svg"
                                     />
                                 </a>
                             </div>

@@ -3,9 +3,9 @@ import styles from "./Farewell.module.css";
 
 export default function Farewell() {
     return (
-        <section id="farewell" className={styles.farewell}>
+        <section className={styles.farewell} id="farewell">
             <div className={styles.container}>
-                <h2 id="farewell-headline" className={`${styles.headline} headline-sh1`}>
+                <h2 className={`${styles.headline} headline-sh1`} id="farewell-headline">
                     ¡Nos emociona poder conocerte pronto!
                 </h2>
 
@@ -14,13 +14,13 @@ export default function Farewell() {
                         Aún estamos construyendo Looppah. Mientras tanto, te avisamos cuando lancemos.
                     </p>
                     <ButtonPill
-                        label="¡Avísame cuando lancen!"
-                        emphasis="Te notificaremos cuando esté listo."
-                        variant="dark"
                         asInput
-                        placeholder="Escribe tu correo"
+                        emphasis="Te notificaremos cuando esté listo."
+                        label="¡Avísame cuando lancen!"
                         submitLabel="Enviar"
+                        variant="dark"
                         icon="/assets/icons/bell.svg"
+                        placeholder="Escribe tu correo"
                     />
                 </div>
             </div>

@@ -10,15 +10,15 @@ const items = [
 
 export default function Ticker() {
     return (
-        <div id="ticker" className={styles.ticker} aria-hidden="true">
+        <div aria-hidden="true" className={styles.ticker} id="ticker">
             <div className={styles.track}>
                 {[...items, ...items].map((item, i) => (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
-                        key={`${item.label}-${i}`}
                         className={styles.item}
-                        src={item.src}
+                        key={`${item.label}-${i}`}
                         alt={item.label}
+                        src={item.src}
                     />
                 ))}
             </div>
