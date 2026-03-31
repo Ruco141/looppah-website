@@ -1,0 +1,30 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    border: none;
+
+    padding: var(--space-100) var(--space-150);
+    border-radius: var(--radius-full);
+
+    color: var(--color-gray-0);
+}
+
+/* ─── Variants ────────────────────────────────── */
+.primary {
+    background-color: var(--color-looppah-blue-500);
+    box-shadow:
+            inset 1px 1px 5px 0px var(--color-looppah-blue-700),
+            0px 1px 5px 0px var(--color-looppah-blue-200);
+}
+
+.dark {
+    background-color: var(--color-looppah-blue-800);
+    box-shadow:
+            inset 1px 1px 5px 0px var(--color-looppah-blue-900),
+            0px 1px 5px 0px var(--color-looppah-blue-400);
+}

@@ -1,0 +1,65 @@
+.pill {
+    display: inline-flex;
+    align-items: center;
+    border-radius: var(--radius-full);
+    border: var(--border-blue);
+    background: var(--color-gray-0);
+    box-shadow: 0px 2px 10px 0px var(--color-looppah-blue-75);
+}
+
+.label {
+    padding: 0 var(--space-150) 0 var(--space-100);
+    color: var(--color-looppah-blue-500);
+}
+
+/* ─── Modo CTA ───────────────────────────────────────────── */
+.pillExpanded {
+    composes: pill;
+    width: 100%;
+    max-width: 600px;
+}
+
+@media (max-width: 39.99rem) {
+    .pillExpanded {
+        max-width: calc(100vw - (var(--layout-margin) * 2));
+    }
+}
+
+.input {
+    flex: 1;
+    min-width: 200px;
+    padding: var(--space-100) var(--space-150);
+    border: none;
+    background: transparent;
+    outline: none;
+
+    color: var(--color-looppah-blue-800);
+}
+
+/* ─── Submit button responsive ───────────────────────────── */
+/* Mobile: mostrar icono, ocultar texto */
+.submitText {
+    display: none;
+}
+
+.submitIcon {
+    display: block;
+}
+
+/* Desktop: mostrar texto, ocultar icono */
+@media (min-width: 40rem) {
+    .submitText {
+        display: block;
+    }
+
+    .submitIcon {
+        display: none;
+    }
+}
+
+/* ─── Label oculto en mobile ─────────────────────────────── */
+@media (max-width: 39.99rem) {
+    .label {
+        display: none;
+    }
+}
