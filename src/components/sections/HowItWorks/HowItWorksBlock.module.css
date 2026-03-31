@@ -1,0 +1,107 @@
+/* ─── Block ──────────────────────────────────────────────── */
+.block {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-200);
+    padding: var(--space-250);
+    border: var(--border-blue);
+    border-radius: var(--radius-400);
+    background: var(--environment-blue);
+    box-shadow: var(--shadow-block);
+}
+
+/* ─── Content ────────────────────────────────────────────── */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-500);
+}
+
+.title {
+    color: var(--color-looppah-blue-500);
+}
+
+.subheadline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--space-200);
+}
+
+.description {
+    color: var(--color-looppah-blue-800);
+}
+
+/* ─── Tags ───────────────────────────────────────────────── */
+.tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: var(--space-50);
+    column-gap: var(--space-100);
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: var(--space-50);
+    padding: var(--space-50) var(--space-100);
+    border: var(--border-blue);
+    border-radius: var(--radius-full);
+    background: var(--environment-blue);
+    box-shadow: var(--shadow-tag);
+}
+
+.tagLabel {
+    white-space: nowrap;
+    color: var(--color-looppah-blue-200);
+}
+
+.tagIconWrap {
+    display: flex;
+    aspect-ratio: 1;
+    width: var(--icon-size);
+    flex-shrink: 0;
+}
+
+.tagIcon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ─── Image ──────────────────────────────────────────────── */
+.imageWrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 248 / 186;
+    border-radius: var(--radius-150);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.image {
+    object-fit: contain;
+}
+
+/* ─── Desktop  ·  min-width: 80rem ────────────────────────── */
+@media (min-width: 80rem) {
+    .block {
+        display: grid;
+        grid-template-columns: 0.6fr 1fr;
+        align-items: center;
+        gap: var(--space-150);
+    }
+
+    .content {
+        align-self: stretch;
+        gap: var(--space-350);
+    }
+
+    .subheadline {
+        gap: var(--space-150);
+    }
+}

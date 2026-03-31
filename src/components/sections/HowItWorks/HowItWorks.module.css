@@ -1,0 +1,124 @@
+/* ─── Section ────────────────────────────────────────────── */
+.howitworks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-350);
+    padding: var(--space-0) var(--layout-margin);
+}
+
+/* ─── Headline ───────────────────────────────────────────── */
+.headline {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.headlineTitle {
+    width: 100%;
+    text-align: center;
+    color: var(--color-looppah-blue-500);
+}
+
+/* ─── Blocks (mobile: carrusel / desktop: stack) ─────────── */
+.blocks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-200);
+}
+
+.blockWrapper {
+    width: 100%;
+}
+
+.stackAnimated {
+    transform-origin: top center;
+    will-change: transform;
+}
+
+/* ─── Carrusel (mobile / tablet) ─────────────────────────── */
+.carouselTrack {
+    flex-direction: row;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 0;
+    gap: var(--space-150);
+    padding-bottom: var(--space-100);
+}
+
+.carouselTrack .blockWrapper {
+    flex: 0 0 calc(100% - var(--space-400));
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.carouselTrack::-webkit-scrollbar {
+    height: 0;
+}
+
+/* ─── Dots (indicador del carrusel) ──────────────────────── */
+.dots {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-50);
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-full);
+    border: var(--border-blue);
+    background: transparent;
+}
+
+.dotActive {
+    background: var(--color-looppah-blue-500);
+    border-color: var(--color-looppah-blue-500);
+}
+
+/* ─── Tablet  ·  min-width: 40rem ─────────────────────────── */
+@media (min-width: 40rem) {
+    .howitworks {
+        gap: var(--space-250);
+    }
+
+    .carouselTrack .blockWrapper {
+        flex-basis: calc(100% - var(--space-900));
+    }
+}
+
+/* ─── Desktop  ·  min-width: 80rem ────────────────────────── */
+@media (min-width: 80rem) {
+    .howitworks {
+        min-height: 300vh;
+        align-items: flex-start;
+        gap: var(--space-300);
+    }
+
+    .dots {
+        display: none;
+    }
+
+    .blocks {
+        position: relative;
+        display: block;
+    }
+
+    .blockWrapper {
+        position: sticky;
+    }
+
+    /* Espacio extra al final para que la última card tenga recorrido de scroll */
+    .blocks::after {
+        content: "";
+        display: block;
+        height: 48vh;
+        pointer-events: none;
+    }
+}
