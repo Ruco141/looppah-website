@@ -13,12 +13,6 @@ export default function Farewell() {
                     <p className={`${styles.subheadline} headline-h5`}>
                         Aún estamos construyendo Looppah. Mientras tanto, te avisamos cuando lancemos.
                     </p>
-
-                    <ButtonPill
-                        label="¡Avísame cuando lancen!"
-                        emphasis="Te notificaremos cuando esté listo."
-                        variant="primary"
-                    />
                     <ButtonPill
                         label="¡Avísame cuando lancen!"
                         emphasis="Te notificaremos cuando esté listo."
