@@ -1,0 +1,23 @@
+.hamburger {
+    position: relative;
+    display: flex;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.dot {
+    position: absolute;
+    background-color: var(--color-looppah-blue-900);
+}
+
+/* ─── Tablet  ·  min-width: 40rem ─────────────── */
+@media (min-width: 40rem) {
+    .hamburger {
+        display: none;
+    }
+}

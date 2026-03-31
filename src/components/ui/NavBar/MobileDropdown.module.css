@@ -1,0 +1,80 @@
+.dropdown {
+    position: absolute;
+    top: calc(100% + var(--space-100));
+    left: var(--layout-margin);
+    right: var(--layout-margin);
+    z-index: 20;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-150);
+    padding: var(--space-200);
+    border-radius: var(--radius-400);
+    border: var(--border-blue);
+    background: linear-gradient(
+            to bottom,
+            rgb(from var(--color-gray-0) r g b / 0.4),
+            rgb(from var(--color-looppah-blue-25) r g b / 0.4)
+    );
+    backdrop-filter: blur(20px);
+    box-shadow: var(--shadow-blue-card);
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 19;
+}
+
+/* ─── Links ───────────────────────────────────── */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-100);
+}
+
+.navLink {
+    display: block;
+    padding: var(--space-100) var(--space-150);
+    border-radius: var(--radius-250);
+    color: var(--color-looppah-blue-800);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.navLink:active {
+    background: rgb(from var(--color-looppah-blue-100) r g b / 0.6);
+}
+
+/* ─── Contact ─────────────────────────────────── */
+.divider {
+    width: 100%;
+    height: 1px;
+    background: var(--color-looppah-blue-200);
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--space-150);
+}
+
+.contactLink {
+    color: var(--color-looppah-blue-800);
+    text-decoration: none;
+}
+
+.instagram {
+    display: flex;
+    align-items: center;
+}
+
+/* ─── Tablet  ·  min-width: 40rem ─────────────── */
+@media (min-width: 40rem) {
+    .dropdown {
+        display: none;
+    }
+}
