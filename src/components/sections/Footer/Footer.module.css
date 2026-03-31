@@ -1,0 +1,40 @@
+.footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: var(--space-150);
+    padding: var(--space-200) var(--layout-margin);
+    background: var(--color-gray-0);
+    border-top: var(--border-blue);
+}
+
+.info {
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--space-150);
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--space-150);
+}
+
+.instagramLink {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.text {
+    text-align: right;
+    color: var(--color-looppah-blue-800);
+}
+
+.email {
+    white-space: nowrap;
+}
