@@ -1,0 +1,56 @@
+.ticker {
+    width: 100%;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 8%,
+            black 92%,
+            transparent 100%
+    );
+    mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 8%,
+            black 92%,
+            transparent 100%
+    );
+}
+
+/* ─── Track ──────────────────────────────────────────────── */
+.track {
+    display: flex;
+    width: max-content;
+    align-items: center;
+    gap: var(--space-1000);
+    padding-right: var(--space-1000);
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* ─── Item ───────────────────────────────────────────────── */
+.item {
+    flex-shrink: 0;
+    width: auto;
+}
+
+/* ─── Alturas mobile — patrón repite cada 5 items ────────── */
+.track .item:nth-child(5n+1) { height: 29px; }
+.track .item:nth-child(5n+2) { height: 47px; }
+.track .item:nth-child(5n+3) { height: 39px; }
+.track .item:nth-child(5n+4) { height: 40px; }
+.track .item:nth-child(5n+5) { height: 30px; }
+
+/* ─── Desktop ─────────────────────────────────────────────── */
+@media (min-width: 40rem) {
+    .track .item:nth-child(5n+1) { height: 35px; }
+    .track .item:nth-child(5n+2) { height: 57px; }
+    .track .item:nth-child(5n+3) { height: 47px; }
+    .track .item:nth-child(5n+4) { height: 49px; }
+    .track .item:nth-child(5n+5) { height: 37px; }
+}
