@@ -1,10 +1,10 @@
 /* ─── Card ───────────────────────────────────────────────── */
 .card {
-    scroll-snap-align: center;
-    flex: 0 0 min(600px, 80vw);
-    border: var(--border-copper);
-    border-radius: var(--radius-400);
+    display: flex;
     padding: var(--space-200);
+    flex: 0 0 min(600px, 80vw);
+    flex-direction: column;
+    gap: var(--space-200);
     /* backdrop-filter removido - aplicado via BackdropBlur wrapper */
     /* Ver: ISSUE-backdrop-filter.md para detalles del bug */
     background: linear-gradient(
@@ -12,9 +12,9 @@
             rgb(from var(--color-copper-25) r g b / 0.3),
             rgb(from var(--color-copper-100) r g b / 0.3)
     );
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-200);
+    border: var(--border-copper);
+    border-radius: var(--radius-400);
+    scroll-snap-align: center;
 }
 
 /* ─── Participant ────────────────────────────────────────── */
@@ -30,10 +30,10 @@
 
 .participantHeader {
     display: flex;
-    align-items: center;
-    gap: var(--space-100);
     width: 100%;
     max-width: 360px;
+    align-items: center;
+    gap: var(--space-100);
 }
 
 .participantHeaderReceiver {
@@ -42,12 +42,12 @@
 
 /* ─── Avatar ─────────────────────────────────────────────── */
 .avatarWrap {
+    overflow: hidden;
     width: 38px;
     min-width: 38px;
     height: 38px;
-    border-radius: var(--radius-full);
-    overflow: hidden;
     flex-shrink: 0;
+    border-radius: var(--radius-full);
 }
 
 .avatar {
@@ -58,16 +58,16 @@
 
 /* ─── Name ───────────────────────────────────────────────── */
 .participantName {
-    flex: 1;
-    color: var(--color-looppah-blue-800);
-    white-space: nowrap;
     overflow: hidden;
+    flex: 1;
+    white-space: nowrap;
+    color: var(--color-looppah-blue-800);
     text-overflow: ellipsis;
 }
 
 .participantNameReceiver {
-    color: var(--color-pine-800);
     text-align: right;
+    color: var(--color-pine-800);
 }
 
 /* ─── Bubble ─────────────────────────────────────────────── */
@@ -79,21 +79,21 @@
 }
 
 .bubbleSender {
-    border: var(--border-blue);
     background: linear-gradient(
             to bottom,
             rgb(from var(--color-looppah-blue-25) r g b / 0.6),
             rgb(from var(--color-looppah-blue-75) r g b / 0.6)
     );
+    border: var(--border-blue);
 }
 
 .bubbleReceiver {
-    border: var(--border-pine);
     background: linear-gradient(
             to bottom,
             rgb(from var(--color-pine-25) r g b / 0.6),
             rgb(from var(--color-pine-100) r g b / 0.6)
     );
+    border: var(--border-pine);
 }
 
 /* ─── Message ────────────────────────────────────────────── */
@@ -102,8 +102,8 @@
 }
 
 .messageReceiver {
-    color: var(--color-pine-700);
     text-align: right;
+    color: var(--color-pine-700);
 }
 
 /* ─── Tablet  ·  min-width: 40rem ─────────────────────────── */

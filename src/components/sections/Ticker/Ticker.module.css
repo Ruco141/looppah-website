@@ -1,6 +1,6 @@
 .ticker {
-    width: 100%;
     overflow: hidden;
+    width: 100%;
     -webkit-mask-image: linear-gradient(
             to right,
             transparent 0%,
@@ -21,9 +21,9 @@
 .track {
     display: flex;
     width: max-content;
+    padding-right: var(--space-1000);
     align-items: center;
     gap: var(--space-1000);
-    padding-right: var(--space-1000);
     animation: scroll 20s linear infinite;
 }
 
@@ -35,8 +35,8 @@
 
 /* ─── Item ───────────────────────────────────────────────── */
 .item {
-    flex-shrink: 0;
     width: auto;
+    flex-shrink: 0;
 }
 
 /* ─── Alturas mobile — patrón repite cada 5 items ────────── */

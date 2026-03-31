@@ -1,17 +1,17 @@
 /* ─── Section ────────────────────────────────────────────── */
 .howitworks {
-    width: 100%;
     display: flex;
+    width: 100%;
+    padding: var(--space-0) var(--layout-margin);
     flex-direction: column;
     align-items: center;
     gap: var(--space-350);
-    padding: var(--space-0) var(--layout-margin);
 }
 
 /* ─── Headline ───────────────────────────────────────────── */
 .headline {
-    width: 100%;
     display: flex;
+    width: 100%;
     justify-content: center;
 }
 
@@ -23,8 +23,8 @@
 
 /* ─── Blocks (mobile: carrusel / desktop: stack) ─────────── */
 .blocks {
-    width: 100%;
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     gap: var(--space-200);
@@ -41,13 +41,13 @@
 
 /* ─── Carrusel (mobile / tablet) ─────────────────────────── */
 .carouselTrack {
-    flex-direction: row;
     overflow-x: auto;
+    padding-bottom: var(--space-100);
+    flex-direction: row;
+    gap: var(--space-150);
     overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;
     scroll-padding-left: 0;
-    gap: var(--space-150);
-    padding-bottom: var(--space-100);
 }
 
 .carouselTrack .blockWrapper {
@@ -62,19 +62,19 @@
 
 /* ─── Dots (indicador del carrusel) ──────────────────────── */
 .dots {
-    width: 100%;
     display: flex;
-    align-items: center;
+    width: 100%;
     justify-content: center;
+    align-items: center;
     gap: var(--space-50);
 }
 
 .dot {
     width: 8px;
     height: 8px;
-    border-radius: var(--radius-full);
-    border: var(--border-blue);
     background: transparent;
+    border: var(--border-blue);
+    border-radius: var(--radius-full);
 }
 
 .dotActive {
@@ -116,8 +116,8 @@
 
     /* Espacio extra al final para que la última card tenga recorrido de scroll */
     .blocks::after {
-        content: "";
         display: block;
+        content: "";
         height: 48vh;
         pointer-events: none;
     }

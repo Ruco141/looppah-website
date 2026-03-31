@@ -1,9 +1,9 @@
 .main {
-    width: 100%;
     display: flex;
+    width: 100%;
+    padding-bottom: var(--layout-spacing);
     flex-direction: column;
     align-items: center;
     gap: var(--layout-spacing);
-    padding-bottom: var(--layout-spacing);
     background: var(--color-looppah-blue-25);
 }

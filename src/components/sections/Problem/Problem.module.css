@@ -1,16 +1,16 @@
 .problem {
-    width: 100%;
     display: flex;
+    width: 100%;
+    padding: var(--space-0) var(--layout-margin);
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-350);
-    padding: var(--space-0) var(--layout-margin);
 }
 
 /* ─── Headline ───────────────────────────────────────────── */
 .headline {
-    width: 100%;
     display: flex;
+    width: 100%;
     justify-content: center;
 }
 
@@ -21,8 +21,8 @@
 }
 
 .subheadline {
-    width: 100%;
     display: flex;
+    width: 100%;
     justify-content: center;
     padding-inline: var(--space-100);
     padding-block-start: var(--space-300);
@@ -40,11 +40,11 @@
 
 /* ─── Cards ──────────────────────────────────────────────── */
 .cards {
-    width: 100%;
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: var(--space-300);
 }
 

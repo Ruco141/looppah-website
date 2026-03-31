@@ -10,24 +10,24 @@
     --foryou-track-gap: var(--space-500);
 
     position: relative;
+    display: flex;
     width: 100%;
     margin: 0 auto;
     padding: var(--foryou-shell-pad);
-    border: var(--border-copper);
-    border-radius: var(--radius-400);
-    display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--foryou-shell-pad);
+    border: var(--border-copper);
+    border-radius: var(--radius-400);
 }
 
 /* ─── Background ─────────────────────────────────────────── */
 .bg {
     position: absolute;
-    inset: 0;
-    border-radius: var(--radius-400);
-    overflow: hidden;
     z-index: 0;
+    inset: 0;
+    overflow: hidden;
+    border-radius: var(--radius-400);
 }
 
 .bgImage {
@@ -40,8 +40,8 @@
     z-index: 1;
     width: 100%;
     padding: 0 var(--space-150);
-    color: var(--color-looppah-blue-800);
     text-align: center;
+    color: var(--color-looppah-blue-800);
 }
 
 /* ─── Track (carrusel horizontal) ────────────────────────── */
@@ -49,17 +49,17 @@
     position: relative;
     z-index: 1;
     display: flex;
-    align-items: center;
-    gap: var(--foryou-track-gap);
     overflow-x: auto;
-    scrollbar-width: none;
-    scroll-snap-type: x mandatory;
 
     width: calc(100% + 2 * var(--foryou-shell-pad));
-    margin-left: calc(-1 * var(--foryou-shell-pad));
     margin-right: calc(-1 * var(--foryou-shell-pad));
-    padding-left: var(--foryou-shell-pad);
+    margin-left: calc(-1 * var(--foryou-shell-pad));
     padding-right: var(--foryou-shell-pad);
+    padding-left: var(--foryou-shell-pad);
+    align-items: center;
+    gap: var(--foryou-track-gap);
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
 }
 
 .track::-webkit-scrollbar {
@@ -76,21 +76,21 @@
 }
 
 .control {
+    /* backdrop-filter removido - no funciona en CSS Modules */
+    /* Los botones de control no necesitan backdrop-filter crítico */
+    display: flex;
     width: 38px;
     min-width: 38px;
     height: 38px;
-    border: var(--border-copper);
-    border-radius: var(--radius-full);
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(
             to bottom,
             rgb(from var(--color-copper-25) r g b / 0.2),
             rgb(from var(--color-copper-100) r g b / 0.2)
     );
-    /* backdrop-filter removido - no funciona en CSS Modules */
-    /* Los botones de control no necesitan backdrop-filter crítico */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border: var(--border-copper);
+    border-radius: var(--radius-full);
     cursor: pointer;
 }
 

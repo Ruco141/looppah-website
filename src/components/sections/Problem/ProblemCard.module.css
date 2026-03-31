@@ -1,18 +1,18 @@
 .card {
     position: relative;
-    flex: 1 0 0;
-    min-width: 280px;
-    overflow: hidden;
-    border: var(--border-copper);
-    border-radius: var(--radius-350);
-    box-shadow: var(--shadow-copper-card);
 
     /* Reserva altura para la ilustración absoluta superior. */
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+    overflow: hidden;
+    min-width: 280px;
     padding: var(--space-4000) var(--space-100) var(--space-100);
+    flex: 1 0 0;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border: var(--border-copper);
+    border-radius: var(--radius-350);
+    box-shadow: var(--shadow-copper-card);
 }
 
 .bg {
@@ -28,26 +28,26 @@
 .content {
     position: relative;
     z-index: 1;
-    width: 100%;
     display: flex;
+    width: 100%;
+    padding: var(--space-100);
     flex-direction: column;
     gap: var(--space-200);
-    padding: var(--space-100);
-    border-radius: var(--radius-250);
     color: var(--color-looppah-blue-800);
     background: linear-gradient(
             to bottom,
             rgb(from var(--color-copper-25) r g b / 0.6),
             rgb(from var(--color-copper-75) r g b / 0.6)
     );
+    border-radius: var(--radius-250);
     /* backdrop-filter removido - aplicado via BackdropBlur wrapper */
     /* Ver: ISSUE-backdrop-filter.md para detalles del bug */
 }
 
 .emphasis {
     font-family: var(--font-serif);
-    font-style: italic;
     font-weight: 700;
+    font-style: italic;
     color: var(--color-looppah-blue-500);
 }
 

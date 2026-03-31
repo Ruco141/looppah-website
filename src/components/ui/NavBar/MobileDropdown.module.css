@@ -1,31 +1,31 @@
 .dropdown {
     position: absolute;
     top: calc(100% + var(--space-100));
-    left: var(--layout-margin);
     right: var(--layout-margin);
+    left: var(--layout-margin);
     z-index: 20;
 }
 
 .panel {
     display: flex;
+    padding: var(--space-200);
     flex-direction: column;
     gap: var(--space-150);
-    padding: var(--space-200);
-    border-radius: var(--radius-400);
-    border: var(--border-blue);
     background: linear-gradient(
             to bottom,
             rgb(from var(--color-gray-0) r g b / 0.4),
             rgb(from var(--color-looppah-blue-25) r g b / 0.4)
     );
-    backdrop-filter: blur(20px);
+    border: var(--border-blue);
+    border-radius: var(--radius-400);
     box-shadow: var(--shadow-blue-card);
+    backdrop-filter: blur(20px);
 }
 
 .overlay {
     position: fixed;
-    inset: 0;
     z-index: 19;
+    inset: 0;
 }
 
 /* ─── Links ───────────────────────────────────── */
@@ -38,10 +38,10 @@
 .navLink {
     display: block;
     padding: var(--space-100) var(--space-150);
-    border-radius: var(--radius-250);
-    color: var(--color-looppah-blue-800);
     text-decoration: none;
     white-space: nowrap;
+    color: var(--color-looppah-blue-800);
+    border-radius: var(--radius-250);
 }
 
 .navLink:active {
@@ -57,14 +57,14 @@
 
 .contact {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 0 var(--space-150);
+    justify-content: space-between;
+    align-items: center;
 }
 
 .contactLink {
-    color: var(--color-looppah-blue-800);
     text-decoration: none;
+    color: var(--color-looppah-blue-800);
 }
 
 .instagram {

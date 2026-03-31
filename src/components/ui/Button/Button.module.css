@@ -1,17 +1,17 @@
 .btn {
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
-    cursor: pointer;
-    border: none;
 
     padding: var(--space-100) var(--space-150);
-    border-radius: var(--radius-full);
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
 
     color: var(--color-gray-0);
+    border: none;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    text-overflow: ellipsis;
 }
 
 /* ─── Variants ────────────────────────────────── */
