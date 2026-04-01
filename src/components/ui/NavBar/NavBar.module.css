@@ -8,6 +8,10 @@
     align-items: center;
 }
 
+.scrollHidden {
+    pointer-events: none;
+}
+
 /* ─── Brand ───────────────────────────────────── */
 .isotipo {
     display: block;
@@ -41,12 +45,12 @@
 
 .navLabel {
     position: relative;
-    z-index: 0;
+    z-index: 1;
 }
 
 .activeBubble {
     position: absolute;
-    z-index: 1;
+    z-index: 0;
     inset: 0;
     background: rgb(from var(--color-looppah-blue-100) r g b / 0.6);
     border-radius: inherit;

@@ -47,8 +47,8 @@ export default function Navbar() {
                 />
 
                 <motion.div
+                    className={scrolled ? styles.scrollHidden : ""}
                     animate={{ opacity: scrolled ? 0 : 1 }}
-                    style={{ pointerEvents: scrolled ? "none" : "auto" }}
                     transition={{ duration: 0.6, ease: "easeInOut" }}
                 >
                     <Image
@@ -76,11 +76,11 @@ export default function Navbar() {
                         {bubbleTarget === link.href && (
                             <motion.span
                                 className={styles.activeBubble}
+                                layout="x"
+                                layoutId="bubble"
                                 animate={{
                                     scale: hovered ? 1.1 : 1,
                                 }}
-                                layout="x"
-                                layoutId="bubble"
                                 transition={{
                                     type: "spring",
                                     stiffness: 150,
@@ -96,9 +96,8 @@ export default function Navbar() {
 
             {/* ── CTA ── */}
             <motion.div
-                className={styles.ctaWrap}
+                className={`${styles.ctaWrap} ${scrolled ? styles.scrollHidden : ""}`}
                 animate={{ opacity: scrolled ? 0 : 1 }}
-                style={{ pointerEvents: scrolled ? "none" : "auto" }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
             >
                 <Button variant="primary">Únete a la lista</Button>
