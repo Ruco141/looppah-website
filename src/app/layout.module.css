@@ -1,9 +1,14 @@
+/**
+ * NOTA: El padding-top del layout se gestiona individualmente
+ * en cada page.css para mayor flexibilidad.
+ * La página de inicio (Hero) maneja su propio padding-top.
+**/
+
 .page {
     position: relative;
     display: flex;
     width: 100%;
     min-height: 100vh;
-    padding-top: var(--layout-margin-top);
     flex-direction: column;
 }
 

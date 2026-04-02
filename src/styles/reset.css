@@ -7,6 +7,7 @@
 html {
     -webkit-text-size-adjust: 100%;
     overflow-x: clip;
+    background-color: var(--color-looppah-blue-25);
 }
 
 body {
