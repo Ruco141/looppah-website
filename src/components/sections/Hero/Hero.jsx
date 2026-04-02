@@ -52,10 +52,11 @@ export default function Hero() {
                     </p>
 
                     <ButtonPill
+                        href="#howitworks"
                         emphasis="Cualquiera que sea tu proyecto, aquí encontraras al equipo."
+                        isStatic
                         label="Mira como funciona"
                         variant="dark"
-                        onClick={() => document.getElementById("howitworks")?.scrollIntoView({ behavior: "smooth" })}
                     />
                 </motion.div>
             </div>

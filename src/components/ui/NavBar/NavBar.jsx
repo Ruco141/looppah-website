@@ -100,7 +100,7 @@ export default function Navbar() {
                 animate={{ opacity: scrolled ? 0 : 1 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
             >
-                <Button variant="primary">Únete a la lista</Button>
+                <Button href="#farewell" variant="primary">Únete a la lista</Button>
             </motion.div>
 
 
