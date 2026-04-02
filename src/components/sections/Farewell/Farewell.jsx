@@ -18,7 +18,7 @@ export default function Farewell() {
                         emphasis="Te notificaremos cuando esté listo."
                         label="¡Avísame cuando lancen!"
                         submitLabel="Enviar"
-                        variant="dark"
+                        variant="primary"
                         icon="/assets/icons/bell.svg"
                         placeholder="Escribe tu correo"
                     />
