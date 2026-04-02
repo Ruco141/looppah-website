@@ -11,6 +11,7 @@ export default function ButtonPill({
                                        variant,
                                        label,
                                        emphasis,
+                                       href,
                                        onClick,
                                        isStatic = false,
                                        placeholder,
@@ -47,7 +48,7 @@ export default function ButtonPill({
                         layout="position"
                         transition={{ duration: 0.5, ease: "easeOut" }}
             >
-                <Button variant={variant} onClick={handleButtonClick}>
+                <Button href={isStatic ? href : undefined} variant={variant} onClick={handleButtonClick}>
                     {isExpanded ? (
                         <>
                             <span className={styles.submitText}>{submitLabel}</span>
