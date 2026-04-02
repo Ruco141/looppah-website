@@ -1,4 +1,4 @@
-import ButtonPill from "@/components/ui/Button/ButtonPill";
+import WaitlistPill from "@/components/ui/Button/WaitlistPill";
 import styles from "./Farewell.module.css";
 
 export default function Farewell() {
@@ -13,15 +13,7 @@ export default function Farewell() {
                     <p className={`${styles.subheadline} headline-h5`}>
                         Aún estamos construyendo Looppah. Mientras tanto, te avisamos cuando lancemos.
                     </p>
-                    <ButtonPill
-                        asInput
-                        emphasis="Te notificaremos cuando esté listo."
-                        label="¡Avísame cuando lancen!"
-                        submitLabel="Enviar"
-                        variant="primary"
-                        icon="/assets/icons/bell.svg"
-                        placeholder="Escribe tu correo"
-                    />
+                    <WaitlistPill />
                 </div>
             </div>
         </section>
